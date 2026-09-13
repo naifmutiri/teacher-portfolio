@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ملف شواهد الأداء الوظيفي — الأستاذ نايف المطيري</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- ════════════════════════════════════════════════════════════════
+     لتحديث روابط مجلدات درايف: افتح قسم «إعداد الروابط» أسفل الصفحة،
+     الصق الروابط، ثم انسخ الكتلة الناتجة وضعها مكان الكتلة في الأسفل.
+     ════════════════════════════════════════════════════════════════ -->
+
+<style>
+:root{
+  --green-900:#0D3B2A;
+  --green-700:#14654A;
+  --green-500:#2E8B68;
+  --gold:#B08D2E;
+  --gold-soft:#E8DCBB;
+  --ink:#17211D;
+  --ink-soft:#55635C;
+  --paper:#F6F8F6;
+  --card:#FFFFFF;
+  --line:#DFE7E2;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;
+  font-weight:400;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.kufi{font-family:"Noto Kufi Arabic","IBM Plex Sans Arabic",sans-serif;font-weight:600;line-height:1.5}
+
+/* ── الترويسة ── */
+header{
+  background:
+    linear-gradient(180deg,var(--green-900) 0%,var(--green-700) 100%);
+  color:#fff;
+  padding:44px 24px 0;
+  position:relative;
+  overflow:hidden;
+}
+header::after{
+  content:"";position:absolute;inset:auto 0 0 0;height:4px;
+  background:linear-gradient(90deg,var(--gold) 0%,var(--gold-soft) 50%,var(--gold) 100%);
+}
+.head-wrap{max-width:1080px;margin:0 auto}
+.crest{
+  display:inline-block;border:1px solid rgba(232,220,187,.45);
+  color:var(--gold-soft);border-radius:2px;
+  padding:4px 14px;font-size:.8rem;letter-spacing:.02em;margin-bottom:18px;
+}
+header h1{font-size:clamp(1.7rem,4.2vw,2.6rem);margin:0 0 10px;font-weight:700}
+.head-sub{color:#CFE3D8;font-size:1rem;margin:0 0 26px;max-width:62ch}
+.head-meta{display:flex;flex-wrap:wrap;gap:28px;padding-bottom:30px}
+.head-meta div{min-width:130px}
+.head-meta span{display:block;font-size:.78rem;color:#9FC3B1;margin-bottom:2px}
+.head-meta strong{font-weight:500;font-size:1rem}
+
+/* ── شريط المحاور ── */
+nav.rail{
+  position:sticky;top:0;z-index:30;
+  background:rgba(246,248,246,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.rail-wrap{max-width:1080px;margin:0 auto;display:flex;gap:4px;padding:0 16px;overflow-x:auto}
+.rail button{
+  appearance:none;background:none;border:0;border-bottom:3px solid transparent;
+  font:inherit;font-family:"Noto Kufi Arabic",sans-serif;font-size:.95rem;
+  color:var(--ink-soft);padding:16px 14px;cursor:pointer;white-space:nowrap;
+  transition:color .15s,border-color .15s;
+}
+.rail button:hover{color:var(--green-700)}
+.rail button[aria-selected="true"]{color:var(--green-900);border-color:var(--gold);font-weight:600}
+.rail button:focus-visible{outline:2px solid var(--green-500);outline-offset:-4px}
+.rail .n{
+  display:inline-block;background:var(--green-900);color:#fff;
+  width:22px;height:22px;line-height:22px;text-align:center;border-radius:50%;
+  font-size:.78rem;margin-left:8px;vertical-align:1px;
+}
+.rail button[aria-selected="true"] .n{background:var(--gold)}
+
+main{max-width:1080px;margin:0 auto;padding:34px 20px 80px}
+
+/* ── حالة الربط ── */
+.status{
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  background:var(--card);border:1px solid var(--line);border-right:4px solid var(--gold);
+  padding:14px 18px;margin-bottom:30px;border-radius:3px;
+}
+.status p{margin:0;font-size:.93rem;color:var(--ink-soft)}
+.bar{flex:1;min-width:160px;height:6px;background:#E7EDE9;border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--green-500);transition:width .4s}
+
+/* ── بطاقة المعيار ── */
+.axis-title{
+  font-size:1.25rem;color:var(--green-900);margin:0 0 4px;
+  padding-bottom:14px;border-bottom:1px solid var(--line);
+}
+.axis-note{color:var(--ink-soft);font-size:.9rem;margin:10px 0 26px}
+.std{
+  background:var(--card);border:1px solid var(--line);border-radius:4px;
+  margin-bottom:20px;overflow:hidden;
+}
+.std-head{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:20px 22px 16px;border-bottom:1px dashed var(--line);
+}
+.code{
+  flex:none;font-family:"Noto Kufi Arabic",sans-serif;font-size:.85rem;
+  color:var(--gold);border:1px solid var(--gold-soft);border-radius:3px;
+  padding:3px 9px;margin-top:3px;
+}
+.std-head h3{margin:0;font-size:1.08rem;color:var(--green-900)}
+.cols{display:grid;grid-template-columns:1.35fr 1fr;gap:0}
+@media(max-width:760px){.cols{grid-template-columns:1fr}}
+.col{padding:18px 22px 22px}
+.col:first-child{border-left:1px solid var(--line)}
+@media(max-width:760px){.col:first-child{border-left:0;border-bottom:1px solid var(--line)}}
+.col h4{
+  margin:0 0 12px;font-size:.85rem;font-weight:500;color:var(--ink-soft);
+  font-family:"IBM Plex Sans Arabic",sans-serif;
+}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:0;list-style:none}
+.chips li{
+  background:#F1F5F2;border:1px solid #E2EAE5;border-radius:14px;
+  padding:4px 12px;font-size:.86rem;color:#33453C;
+}
+.ev{margin:0 0 16px;padding:0;list-style:none}
+.ev li{
+  position:relative;padding-right:18px;font-size:.9rem;color:#33453C;line-height:2;
+}
+.ev li::before{
+  content:"";position:absolute;right:0;top:14px;
+  width:6px;height:6px;background:var(--gold);border-radius:50%;
+}
+.drive{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--green-700);color:#fff;text-decoration:none;
+  font-family:"Noto Kufi Arabic",sans-serif;font-size:.9rem;
+  padding:10px 18px;border-radius:3px;transition:background .15s;
+}
+.drive:hover{background:var(--green-900)}
+.drive:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.drive svg{width:17px;height:17px;flex:none}
+.drive.empty{
+  background:#F1F5F2;color:var(--ink-soft);border:1px dashed #C9D6CE;cursor:not-allowed;
+}
+
+/* ── إعداد الروابط ── */
+details.setup{
+  margin-top:44px;background:var(--card);border:1px solid var(--line);border-radius:4px;
+}
+details.setup summary{
+  padding:16px 22px;cursor:pointer;font-family:"Noto Kufi Arabic",sans-serif;
+  color:var(--green-900);font-size:1rem;
+}
+details.setup summary:focus-visible{outline:2px solid var(--green-500);outline-offset:-3px}
+.setup-body{padding:0 22px 24px;border-top:1px solid var(--line)}
+.setup-body p{font-size:.9rem;color:var(--ink-soft);max-width:70ch}
+.row{display:flex;gap:10px;align-items:center;margin-bottom:9px;flex-wrap:wrap}
+.row label{flex:none;width:270px;font-size:.88rem}
+.row input{
+  flex:1;min-width:220px;font:inherit;font-size:.85rem;direction:ltr;text-align:left;
+  padding:8px 11px;border:1px solid var(--line);border-radius:3px;background:#FBFCFB;
+}
+.row input:focus{outline:2px solid var(--green-500);outline-offset:-1px}
+.gen{
+  margin-top:16px;background:var(--green-900);color:#fff;border:0;border-radius:3px;
+  font:inherit;font-family:"Noto Kufi Arabic",sans-serif;padding:11px 22px;cursor:pointer;
+}
+.gen:hover{background:var(--green-700)}
+pre.out{
+  margin-top:16px;background:#0D3B2A;color:#D9EBE1;padding:18px;border-radius:3px;
+  direction:ltr;text-align:left;font-size:.8rem;overflow-x:auto;white-space:pre;display:none;
+}
+footer{
+  text-align:center;color:var(--ink-soft);font-size:.85rem;
+  padding:30px 20px;border-top:1px solid var(--line);
+}
+
+@media print{
+  nav.rail,details.setup,.status,footer{display:none!important}
+  body{background:#fff}
+  header{padding-top:24px}
+  main{padding:0}
+  .axis-pane{display:block!important;break-before:page}
+  .axis-pane:first-of-type{break-before:auto}
+  .std{break-inside:avoid;border-color:#bbb}
+  .drive{border:1px solid #888;background:#fff!important;color:#000!important}
+  @page{size:A4;margin:14mm}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head-wrap">
+    <div class="crest">وزارة التعليم — إدارة تعليم الدرعية</div>
+    <h1>ملف شواهد الأداء الوظيفي</h1>
+    <p class="head-sub">المحاور الأربعة لتقييم أداء المعلم، وبنود كل معيار مع الشواهد المطلوبة، ومجلد مستقل في درايف لحفظ شواهد كل معيار.</p>
+    <div class="head-meta">
+      <div><span>المعلم</span><strong id="m-teacher"></strong></div>
+      <div><span>المدرسة</span><strong id="m-school"></strong></div>
+      <div><span>التخصص</span><strong id="m-subject"></strong></div>
+      <div><span>العام الدراسي</span><strong id="m-year"></strong></div>
+    </div>
+  </div>
+</header>
+
+<nav class="rail"><div class="rail-wrap" id="rail" role="tablist"></div></nav>
+
+<main>
+  <div class="status">
+    <p><strong id="linked">٠</strong> من <strong id="total">١١</strong> معياراً مرتبط بمجلد شواهد</p>
+    <div class="bar"><i id="bar" style="width:0"></i></div>
+  </div>
+
+  <div id="panes"></div>
+
+  <details class="setup">
+    <summary>إعداد روابط المجلدات</summary>
+    <div class="setup-body">
+      <p>أنشئ في درايف مجلداً لكل معيار، اضبط مشاركته على «أي شخص لديه الرابط»، ثم الصق الرابط في الحقل المقابل. بعد تعبئة ما تريد اضغط «أنشئ كتلة الروابط»، وانسخ الناتج وضعه مكان كتلة <code dir="ltr">FOLDERS</code> في ملف <code dir="ltr">index.html</code>.</p>
+      <div id="rows"></div>
+      <button class="gen" id="genBtn">أنشئ كتلة الروابط</button>
+      <pre class="out" id="out"></pre>
+    </div>
+  </details>
+</main>
+
+<footer>إعداد الأستاذ نايف المطيري</footer>
+
+<script>
+/* ═══════════ بيانات الملف ═══════════ */
+const INFO = {
+  teacher: "نايف المطيري",
+  school : "ابتدائية ومتوسطة الجبيلة (بنين)",
+  subject: "العلوم",
+  year   : "١٤٤٨هـ"
+};
+
+/* ═══════════ FOLDERS — روابط مجلدات درايف ═══════════ */
+const FOLDERS = {
+  "1-1": "https://drive.google.com/drive/folders/1Y09-aWV701qAoHifEmpLx8P30Hi9b5Qr",
+  "1-2": "https://drive.google.com/drive/folders/17EJ1Fu-jbKNXTjjgjDCOsmG9aRjtrx2Q",
+  "1-3": "https://drive.google.com/drive/folders/1wOAUYrGC4XooPBudONMjUaugrs-3Ug-E",
+  "2-1": "https://drive.google.com/drive/folders/1LGG3XcXa9INq3ECqAdfbEntUfu_6QIEc",
+  "2-2": "https://drive.google.com/drive/folders/1jiHPxKWZh4mlk1CIWL6c2cCf7Nif61mx",
+  "2-3": "https://drive.google.com/drive/folders/1ASNRpnplwaQJpNDtQkMNRyPmVJQE1HP5",
+  "3-1": "https://drive.google.com/drive/folders/1V4d2xagV9_Wce4o3fVq1bI_X3k8KbT_6",
+  "3-2": "https://drive.google.com/drive/folders/10iDfnWAW_45kEUtCvcPqJUOeIXkiE9ty",
+  "4-1": "https://drive.google.com/drive/folders/1KUXAJw3yfYM9WqnQJIXtG2UmveDhrpbp",
+  "4-2": "https://drive.google.com/drive/folders/18YqnasdggjLCMf-PpFFK29bu3AwtV3aP",
+  "4-3": "https://drive.google.com/drive/folders/1nDjLXq7C3yk-27BwTzvDPL-a1c2JIbXm"
+};
+/* ═══════════ نهاية كتلة الروابط ═══════════ */
+
+const AXES = [
+  {
+    n:"١", title:"الواجبات والتفاعل المهني",
+    note:"يغطي الالتزام الوظيفي، والنمو المهني، والشراكة مع الأسرة.",
+    stds:[
+      { id:"1-1", title:"أداء الواجبات الوظيفية",
+        items:["الحفاظ على الدوام","الإجازات","إشعار الغياب","حصص الانتظار","اللجان المدرسية","المناوبة","حصص النشاط","المناسبات الوطنية","التواصل مع الإدارة","المبادرات","الإذاعة والطابور","زمن الحصة","التعاميم","السلوك المهني","مراعاة المرحلة العمرية","منصة مدرستي"],
+        ev:["سجل الدوام","خطابات التكليف","المبادرات","توقيع التعاميم","تقارير مدرستي"] },
+      { id:"1-2", title:"التفاعل مع المجتمع المهني",
+        items:["البرامج التدريبية","الزيارات التبادلية","مجتمعات التعلم","الدروس التطبيقية","إنتاج معرفي","الرخصة المهنية"],
+        ev:["الشهادات","الرخصة المهنية","سجل الزيارات","الملازم"] },
+      { id:"1-3", title:"التفاعل مع أولياء الأمور",
+        items:["التواصل الفعال","التقارير","الاجتماعات","الاستدعاء","سجل المتابعة"],
+        ev:["رسائل الواتساب","كشوف الاستدعاء","سجل المتابعة"] }
+    ]
+  },
+  {
+    n:"٢", title:"التخطيط والبيئة الصفية",
+    note:"يغطي خطط التعلم، وبيئة الفصل، وضبط الإدارة الصفية.",
+    stds:[
+      { id:"2-1", title:"إعداد وتنفيذ خطة التعلم",
+        items:["توزيع المنهج","خطة التعلم","تحضير المنصة","الخطة العلاجية والإثرائية","خطة النشاط"],
+        ev:["توزيع المنهج","التحضير بمنصة مدرستي"] },
+      { id:"2-2", title:"تهيئة بيئة تعليمية",
+        items:["بيئة آمنة","الأمان النفسي","التعبير عن النفس","إثارة الدافعية"],
+        ev:["لوحات التعزيز","صور تنظيم الفصل"] },
+      { id:"2-3", title:"الإدارة الصفية",
+        items:["القوانين الصفية","تعزيز الانضباط","نبرات الصوت","تنظيم الطلاب"],
+        ev:["ميثاق الفصل","سجل السلوك"] }
+    ]
+  },
+  {
+    n:"٣", title:"استراتيجيات التدريس والتقنيات",
+    note:"يغطي تنويع الاستراتيجيات وتوظيف التقنية ومصادر التعلم.",
+    stds:[
+      { id:"3-1", title:"التنوع في استراتيجيات التدريس",
+        items:["دمج التفكير","استراتيجيات ملائمة","الفهم القرائي","ربط الدرس بالواقع"],
+        ev:["خطط الدروس","الخرائط الذهنية"] },
+      { id:"3-2", title:"توظيف تقنيات ووسائل التعلم",
+        items:["سجل المصادر","مراعاة الفروق","التأمل والتفكير","الذكاء الاصطناعي","قنوات عين","أنشطة منصة مدرستي"],
+        ev:["صور تفعيل الذكاء الاصطناعي","سجل المختبر","أنشطة مدرستي"] }
+    ]
+  },
+  {
+    n:"٤", title:"التقويم وتحسين النتائج",
+    note:"يغطي تشخيص المستويات، ومعالجة الفاقد، وتنويع أدوات التقويم.",
+    stds:[
+      { id:"4-1", title:"تحسين نتائج المتعلمين",
+        items:["الاختبارات التشخيصية","المهارات المفقودة","خطط علاجية وإثرائية","ملفات الإنجاز","تصحيح الكتب","تحليل النتائج","التحفيز","نتائج نافس"],
+        ev:["تصحيح الكتب","ملفات الطلاب","تقارير نافس"] },
+      { id:"4-2", title:"تحليل نتائج وتشخيص مستويات المتعلمين",
+        items:["تحليل التقييم","تحديد نقاط القوة والضعف","إشراك الطلاب"],
+        ev:["رسوم بيانية","استمارات تشخيص"] },
+      { id:"4-3", title:"تنوع أساليب التقويم",
+        items:["تنوع المصادر","المهام الأدائية","التغذية الراجعة","التقويم التكويني والختامي","معايير الاختبار الجيد"],
+        ev:["نماذج الاختبارات","سجل المهام","سجل الدرجات"] }
+    ]
+  }
+];
+
+/* ═══════════ بناء الصفحة ═══════════ */
+const ar = n => String(n).replace(/\d/g, d => "٠١٢٣٤٥٦٧٨٩"[d]);
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const driveIcon = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 4h-6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2z"/></svg>';
+
+document.getElementById("m-teacher").textContent = INFO.teacher;
+document.getElementById("m-school").textContent  = INFO.school;
+document.getElementById("m-subject").textContent = INFO.subject;
+document.getElementById("m-year").textContent    = INFO.year;
+
+const rail  = document.getElementById("rail");
+const panes = document.getElementById("panes");
+const rows  = document.getElementById("rows");
+
+AXES.forEach((ax, i) => {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.setAttribute("role","tab");
+  btn.setAttribute("aria-selected", i === 0 ? "true" : "false");
+  btn.setAttribute("aria-controls","pane-"+i);
+  btn.innerHTML = '<span class="n">'+ax.n+'</span>'+esc(ax.title);
+  btn.onclick = () => show(i);
+  rail.appendChild(btn);
+
+  const pane = document.createElement("section");
+  pane.className = "axis-pane";
+  pane.id = "pane-"+i;
+  pane.setAttribute("role","tabpanel");
+  pane.style.display = i === 0 ? "block" : "none";
+  pane.innerHTML =
+    '<h2 class="axis-title">المحور '+ax.n+' — '+esc(ax.title)+'</h2>'+
+    '<p class="axis-note">'+esc(ax.note)+'</p>'+
+    ax.stds.map(s => card(s)).join("");
+  panes.appendChild(pane);
+
+  ax.stds.forEach(s => {
+    const row = document.createElement("div");
+    row.className = "row";
+    row.innerHTML =
+      '<label for="f-'+s.id+'">'+ar(s.id.replace("-","/"))+' — '+esc(s.title)+'</label>'+
+      '<input id="f-'+s.id+'" data-id="'+s.id+'" type="url" dir="ltr" placeholder="https://drive.google.com/drive/folders/..." value="'+(FOLDERS[s.id]||"")+'">';
+    rows.appendChild(row);
+  });
+});
+
+function card(s){
+  const url = FOLDERS[s.id];
+  const btn = url
+    ? '<a class="drive" href="'+esc(url)+'" target="_blank" rel="noopener">'+driveIcon+'فتح مجلد الشواهد</a>'
+    : '<span class="drive empty">'+driveIcon+'لم يُربط مجلد بعد</span>';
+  return '<article class="std">'+
+    '<div class="std-head"><span class="code">'+ar(s.id.replace("-","/"))+'</span><h3>'+esc(s.title)+'</h3></div>'+
+    '<div class="cols">'+
+      '<div class="col"><h4>البنود المقيَّمة</h4><ul class="chips">'+
+        s.items.map(t => '<li>'+esc(t)+'</li>').join("")+
+      '</ul></div>'+
+      '<div class="col"><h4>الشواهد المطلوبة</h4><ul class="ev">'+
+        s.ev.map(t => '<li>'+esc(t)+'</li>').join("")+
+      '</ul>'+btn+'</div>'+
+    '</div></article>';
+}
+
+function show(i){
+  [...rail.children].forEach((b,j) => b.setAttribute("aria-selected", j === i ? "true" : "false"));
+  [...panes.children].forEach((p,j) => p.style.display = j === i ? "block" : "none");
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+const keys   = Object.keys(FOLDERS);
+const linked = keys.filter(k => FOLDERS[k]).length;
+document.getElementById("linked").textContent = ar(linked);
+document.getElementById("total").textContent  = ar(keys.length);
+document.getElementById("bar").style.width    = (linked / keys.length * 100) + "%";
+
+document.getElementById("genBtn").onclick = () => {
+  const obj = {};
+  rows.querySelectorAll("input").forEach(inp => obj[inp.dataset.id] = inp.value.trim());
+  const body = Object.keys(FOLDERS)
+    .map(k => '  "'+k+'": "'+(obj[k]||"")+'"').join(",\n");
+  const out = document.getElementById("out");
+  out.textContent = "const FOLDERS = {\n" + body + "\n};";
+  out.style.display = "block";
+  navigator.clipboard?.writeText(out.textContent);
+};
+</script>
+</body>
+</html>
